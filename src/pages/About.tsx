@@ -21,9 +21,9 @@ export default function About() {
     { name: "Python", level: 85, category: "Programming" },
     { name: "Pandas & NumPy", level: 80, category: "Data Manipulation" },
     { name: "Matplotlib & Seaborn", level: 75, category: "Visualization" },
-    { name: "Statistics", level: 80, category: "Mathematics" },
+    { name: "Statistics", level: 70, category: "Mathematics" },
     { name: "SQL", level: 65, category: "Database" },
-    { name: "Machine Learning", level: 30, category: "AI/ML" },
+    { name: "Machine Learning", level: 60, category: "AI/ML" },
   ];
 
   const achievements = [
@@ -31,7 +31,7 @@ export default function About() {
     "Mastered data cleaning and preprocessing techniques",
     "Developed expertise in statistical analysis and hypothesis testing",
     "Created interactive visualizations using modern Python libraries",
-    "Strong hold on statistical analysisi",
+    "Applied ML algorithms for predictive analytics",
   ];
 
   return (
@@ -47,10 +47,8 @@ export default function About() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About My Journey</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              As a 3rd-year B.E. student specializing in <span className="text-primary font-semibold">AI & Data Science</span>, I am actively expanding my knowledge through 
-              the <span className="text-primary font-semibold">Data Science with Gen AI</span> program at PW Skills. My portfolio is a reflection of this hands-on learning, 
-              where I delve into the captivating world of Exploratory Data Analysis, building a strong foundation for 
-              my work in machine learning.
+              I'm currently pursuing <span className="text-primary font-semibold">AI & Data Science</span> through PWSkills' 
+              comprehensive program, exploring the fascinating world of Exploratory Data Analysis as part of my Machine Learning journey.
             </p>
           </div>
         </div>
@@ -101,14 +99,14 @@ export default function About() {
                     <BarChart3 className="h-4 w-4 mr-2 text-accent" />
                     Data Visualization
                   </span>
-                  <Badge>Moderate</Badge>
+                  <Badge>Intermediate</Badge>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="flex items-center">
                     <Database className="h-4 w-4 mr-2 text-accent" />
                     Statistical Analysis
                   </span>
-                  <Badge>Moderate</Badge>
+                  <Badge>Intermediate</Badge>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="flex items-center">
@@ -172,34 +170,28 @@ export default function About() {
 
       {/* Connect Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-primary/10 to-accent/10">
-  <div className="container mx-auto text-center">
-    <h2 className="text-3xl font-bold mb-6">Let's Connect</h2>
-    <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-      I'm always eager to learn from others in the data science community and share my experiences. 
-      Feel free to reach out if you'd like to discuss projects, techniques, or opportunities.
-    </p>
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      <Button size="lg" className="bg-gradient-to-r from-primary to-accent" asChild>
-        <a href="mailto:your.email@example.com">
-          <Mail className="h-4 w-4 mr-2" />
-          Email Me
-        </a>
-      </Button>
-      <Button variant="outline" size="lg" asChild>
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-          <Linkedin className="h-4 w-4 mr-2" />
-          LinkedIn
-        </a>
-      </Button>
-      <Button variant="outline" size="lg" asChild>
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-          <Github className="h-4 w-4 mr-2" />
-          GitHub
-        </a>
-      </Button>
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Let's Connect</h2>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            I'm always eager to learn from others in the data science community and share my experiences. 
+            Feel free to reach out if you'd like to discuss projects, techniques, or opportunities.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-gradient-to-r from-primary to-accent">
+              <Mail className="h-4 w-4 mr-2" />
+              Email Me
+            </Button>
+            <Button variant="outline" size="lg">
+              <Linkedin className="h-4 w-4 mr-2" />
+              LinkedIn
+            </Button>
+            <Button variant="outline" size="lg">
+              <Github className="h-4 w-4 mr-2" />
+              GitHub
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
-</section>
-      
   );
 }
