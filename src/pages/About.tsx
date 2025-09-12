@@ -15,9 +15,10 @@ import {
   BookOpen,
   Target
 } from "lucide-react";
+import { Skill } from "@/types";
 
 export default function About() {
-  const skills = [
+  const skills: Skill[] = [
     { name: "Python", level: 85, category: "Programming" },
     { name: "Pandas & NumPy", level: 80, category: "Data Manipulation" },
     { name: "Matplotlib & Seaborn", level: 75, category: "Visualization" },

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { NavigationItem } from "@/types";
 
 const datasets = [
   { name: "Google Play Store", path: "/dataset/google-playstore" },
@@ -24,13 +25,14 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const navItems = [
+  const navItems: NavigationItem[] = [
     { name: "Home", path: "/", icon: Home },
     { name: "About Me", path: "/about", icon: User },
     { name: "Contact", path: "/contact", icon: Mail },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const handleSheetClose = useCallback(() => setIsOpen(false), []);
+  const isActive = useCallback((path: string) => location.pathname === path, [location.pathname]);
 
   return (
     <nav className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
@@ -99,7 +101,7 @@ export function Navigation() {
                   <Link
                     key={item.path}
                     to={item.path}
-                    onClick={() => setIsOpen(false)}
+                     onClick={handleSheetClose}
                     className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActive(item.path)
                         ? "bg-primary text-primary-foreground"
@@ -116,7 +118,7 @@ export function Navigation() {
                     <Link
                       key={dataset.path}
                       to={dataset.path}
-                      onClick={() => setIsOpen(false)}
+                      onClick={handleSheetClose}
                       className={`block px-3 py-2 rounded-md text-sm hover:bg-accent transition-colors ${
                         isActive(dataset.path) ? "bg-accent" : ""
                       }`}

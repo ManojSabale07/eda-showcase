@@ -3,17 +3,15 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Download, FileText } from "lucide-react";
-
-interface DatasetCardProps {
-  title: string;
-  description: string;
-  category: string;
-  techniques: string[];
-  path: string;
-  icon: React.ReactNode;
-}
+import { DatasetCardProps } from "@/types";
 
 export function DatasetCard({ title, description, category, techniques, path, icon }: DatasetCardProps) {
+  // Add error handling for missing props
+  if (!title || !path) {
+    console.warn('DatasetCard: Missing required props', { title, path });
+    return null;
+  }
+
   return (
     <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-br from-card to-card/80 border-border/50">
       <CardHeader className="pb-4">

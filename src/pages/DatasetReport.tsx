@@ -15,8 +15,9 @@ import {
   Code,
   Github
 } from "lucide-react";
+import { DatasetInfo } from "@/types";
 
-const datasetInfo = {
+const datasetInfo: Record<string, DatasetInfo> = {
   "google-playstore": {
     title: "Google Play Store Apps Analysis",
     description: "Comprehensive EDA on Google Play Store app data including ratings, installs, categories, and pricing strategies.",
