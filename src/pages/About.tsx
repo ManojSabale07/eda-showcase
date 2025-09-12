@@ -21,9 +21,9 @@ export default function About() {
     { name: "Python", level: 85, category: "Programming" },
     { name: "Pandas & NumPy", level: 80, category: "Data Manipulation" },
     { name: "Matplotlib & Seaborn", level: 75, category: "Visualization" },
-    { name: "Statistics", level: 70, category: "Mathematics" },
+    { name: "Statistics", level: 80, category: "Mathematics" },
     { name: "SQL", level: 65, category: "Database" },
-    { name: "Machine Learning", level: 60, category: "AI/ML" },
+    { name: "Machine Learning", level: 30, category: "AI/ML" },
   ];
 
   const achievements = [
@@ -31,7 +31,7 @@ export default function About() {
     "Mastered data cleaning and preprocessing techniques",
     "Developed expertise in statistical analysis and hypothesis testing",
     "Created interactive visualizations using modern Python libraries",
-    "Applied ML algorithms for predictive analytics",
+    "Strong hold on statistical analysisi",
   ];
 
   return (
@@ -47,8 +47,10 @@ export default function About() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About My Journey</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              I'm currently pursuing <span className="text-primary font-semibold">AI & Data Science</span> through PWSkills' 
-              comprehensive program, exploring the fascinating world of Exploratory Data Analysis as part of my Machine Learning journey.
+              As a 3rd-year B.E. student specializing in <span className="text-primary font-semibold">AI & Data Science</span>, I am actively expanding my knowledge through 
+              the <span className="text-primary font-semibold">Data Science with Gen AI</span> program at PW Skills. My portfolio is a reflection of this hands-on learning, 
+              where I delve into the captivating world of Exploratory Data Analysis, building a strong foundation for 
+              my work in machine learning.
             </p>
           </div>
         </div>
@@ -99,14 +101,14 @@ export default function About() {
                     <BarChart3 className="h-4 w-4 mr-2 text-accent" />
                     Data Visualization
                   </span>
-                  <Badge>Intermediate</Badge>
+                  <Badge>Moderate</Badge>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="flex items-center">
                     <Database className="h-4 w-4 mr-2 text-accent" />
                     Statistical Analysis
                   </span>
-                  <Badge>Intermediate</Badge>
+                  <Badge>Moderate</Badge>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="flex items-center">
