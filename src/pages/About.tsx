@@ -172,34 +172,28 @@ export default function About() {
 
       {/* Connect Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-primary/10 to-accent/10">
-  <div className="container mx-auto text-center">
-    <h2 className="text-3xl font-bold mb-6">Let's Connect</h2>
-    <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-      I'm always eager to learn from others in the data science community and share my experiences. 
-      Feel free to reach out if you'd like to discuss projects, techniques, or opportunities.
-    </p>
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      <Button size="lg" className="bg-gradient-to-r from-primary to-accent" asChild>
-        <a href="mailto:your.email@example.com">
-          <Mail className="h-4 w-4 mr-2" />
-          Email Me
-        </a>
-      </Button>
-      <Button variant="outline" size="lg" asChild>
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-          <Linkedin className="h-4 w-4 mr-2" />
-          LinkedIn
-        </a>
-      </Button>
-      <Button variant="outline" size="lg" asChild>
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-          <Github className="h-4 w-4 mr-2" />
-          GitHub
-        </a>
-      </Button>
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Let's Connect</h2>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            I'm always eager to learn from others in the data science community and share my experiences. 
+            Feel free to reach out if you'd like to discuss projects, techniques, or opportunities.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-gradient-to-r from-primary to-accent">
+              <Mail className="h-4 w-4 mr-2" />
+              Email Me
+            </Button>
+            <Button variant="outline" size="lg">
+              <Linkedin className="h-4 w-4 mr-2" />
+              LinkedIn
+            </Button>
+            <Button variant="outline" size="lg">
+              <Github className="h-4 w-4 mr-2" />
+              GitHub
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
-</section>
-      
   );
 }
